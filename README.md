@@ -2,6 +2,6 @@
 A personal project, to create a tarot app that can eventually accommodate any oracle deck.
 
 ## REPL.it Experiments
-[Card & Deck Construction](https://repl.it/@Skybur/Tarot-App-Card-and-Deck-Construction)
+<a href="https://repl.it/@Skybur/Tarot-App-Card-and-Deck-Construction" target="_blank">Card & Deck Construction</a>
 
-[Card Rendering](https://repl.it/@Skybur/Tarot-App-Card-Rendering)
+<a href="https://repl.it/@Skybur/Tarot-App-Card-Rendering" target="_blank">Card Rendering</a>
