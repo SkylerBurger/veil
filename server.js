@@ -40,7 +40,7 @@ app.get('/', renderMain);
 // Main
 //=====
 
-const renderMain = (req, res) => {
+function renderMain (req, res) {
   res.render('pages/main.ejs');
 }
 

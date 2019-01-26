@@ -16,7 +16,7 @@ function Minor (value, suit, meaning) {
   this.suit = suit;
   this.meaning = '';
   this.reversed = false;
-  this.image = `Cards/${value} ${suit}.jpg`;
+  this.image = `img/cards/${value} ${suit}.jpg`;
 }
 
 function Major (name, value, meaning) {
@@ -25,7 +25,7 @@ function Major (name, value, meaning) {
   this.value = value;
   this. meaning = '';
   this.reversed = false;
-  this.image = `Cards/${value} ${name}.jpg`;
+  this.image = `img/cards/${value} ${name}.jpg`;
 }
 
 function Deck () {
@@ -146,16 +146,24 @@ let card_3 = test.deck.pop();
 let cards = [card_1, card_2, card_3];
 
 // Initial Set-Up
-for(let i = 0; i < 3; i++) {
-  let card = 'card_' + i;
-  $('<img/>', {
-    class: `card-image card-${i}`,
-    src: `${card}.image`
-  }).appendTo('.table');
+for(let i = 0; i < cards.length; i++) {
+  let imgEl = $('<img/>', {
+    class: 'card-image',
+    src: `${cards[i].image}`,
+  });
+
+  imgEl.attr('data-position', i+1);
+
+  if(cards[i].reversed){
+    imgEl.addClass('reversed');
+  }
+
+  imgEl.appendTo('.table');
 }
 
 
 // Event Handler
 $('.card-image').on('click', function() {
-  let $election = $(this).val();
+  let $election = $(this).attr('data-position');
+  console.log($election);
 });

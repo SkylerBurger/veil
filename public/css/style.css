@@ -1,0 +1,40 @@
+html, body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgb(37, 179, 160),rgb(15, 70, 62));
+  background-attachment: fixed;
+}
+
+div.table {
+  width: 100%;
+  max-width: 960px;
+  height: 500px;
+  margin: 100px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: 1px solid black;
+}
+
+.back {
+  position: relative;
+  z-index: 1;
+}
+
+.reversed {
+  transform: rotate(180deg);
+}
+
+.card-image {
+  position: relative;
+  display: block;
+  height: 400px;
+  width: 200px;
+  margin: auto;
+  border: 6px solid black;
+  border-radius: 8px;
+  box-shadow: 4px 8px 8px rgb(5, 26, 22);
+  box-sizing: border-box;
+  background-image: url('img/cards/Back.jpg');
+  transition: all 2s ease;
+}
