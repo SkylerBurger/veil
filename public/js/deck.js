@@ -157,8 +157,8 @@ for(let i = 0; i < cards.length; i++) {
   if(cards[i].reversed){
     imgEl.addClass('reversed');
   }
-
-  imgEl.appendTo('.table');
+  let position = '#position-' + (i + 1);
+  imgEl.appendTo(`${position}`);
 }
 
 

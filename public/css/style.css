@@ -16,9 +16,13 @@ div.table {
   border: 1px solid black;
 }
 
-.back {
+.position {
   position: relative;
-  z-index: 1;
+  height: 400px;
+  width: 200px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 4px 8px 8px rgb(5, 26, 22);
 }
 
 .reversed {
@@ -33,7 +37,6 @@ div.table {
   margin: auto;
   border: 6px solid black;
   border-radius: 8px;
-  box-shadow: 4px 8px 8px rgb(5, 26, 22);
   box-sizing: border-box;
   background-image: url('img/cards/Back.jpg');
   transition: all 2s ease;
