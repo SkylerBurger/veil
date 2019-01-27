@@ -56,8 +56,9 @@ function renderTable (req, res) {
 }
 
 function setCustomTable (req, res) {
-  // TODO: import form stuff
-  res.render('pages/table.ejs');
+  console.log(req.body);
+  let labels = req.body;
+  res.render('pages/table.ejs', {type: 'custom', labels: labels});
 }
 
 //=======
