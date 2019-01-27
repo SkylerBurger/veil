@@ -32,8 +32,11 @@ input {
   border-radius: 5px;
   margin-bottom: 15px;
   color: #C2A272;
-  background-color: rgb(79, 68, 87);
   box-shadow: 1px 2px 2px #2C5635;
+}
+
+input[type="submit"] {
+  background-color: rgb(79, 68, 87);
 }
 
 input[type="submit"]:hover {
@@ -80,4 +83,29 @@ input[type="submit"]:active {
 .label {
   display: block;
   margin-top: 20px;
+}
+
+.customize {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.customize input {
+  display: block;
+  margin: 0 auto 10px auto;
+  text-align: center;
+  background-color: rgb(79, 68, 87);
+}
+
+.customize input[type="submit"] {
+  margin-top: 30px;
+}
+
+.customize input:placeholder-shown {
+  background-color: rgb(101, 88, 110);
+}
+
+.customize input::placeholder {
+  color: rgb(153, 128, 90);
+  text-align: center;
 }
