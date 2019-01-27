@@ -1,0 +1,11 @@
+/* RESET */
+@import url(reset.css);
+
+/* STYLING */
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(rgb(37, 179, 160),rgb(15, 70, 62));
+  background-attachment: fixed;
+}

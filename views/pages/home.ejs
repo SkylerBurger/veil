@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head.ejs') %>
+  <title>Home</title>
+</head>
+<body>
+  <main>
+    <div id="home">
+      <h1>Veil</h1>
+      <hr>
+      <h2>An Oracle App</h2>
+      <form action="/table" method="GET">
+        <input type="submit" value="Past/Present/Future Reading">
+      </form>
+      <form action="/custom" method="GET">
+        <input type="submit" value="Custom Three Card Reading">
+      </form>
+    </div>
+  </main>
+
+</body>
+</html>

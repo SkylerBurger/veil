@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/head.ejs') %>
+  <title>Table</title>
+</head>
+
+<body>
+  <main>
+    <div class="table">
+      <div class="position">
+        <div class="card-border">
+          <img src="img/cards/Back.jpg" id="position-1" class="card-image" data-position="1">
+        </div>
+            <% if(type === 'standard') { %>
+              <h2 id="position-1-label" class="label">Past</h2>
+            <% } else if(type === 'custom') { %>
+              <h2 id="position-1-label" class="label"><%= position-1-label %></h2>
+            <% } %>
+      </div>
+
+      <div class="position">
+        <div class="card-border">
+          <img src="img/cards/Back.jpg" id="position-2" class="card-image" data-position="2">
+        </div>
+          <% if(type === 'standard') { %>
+            <h2 id="position-2-label" class="label">Present</h2>
+          <% } else if(type === 'custom') { %>
+            <h2 id="position-2-label" class="label"><%= position-2-label %></h2>
+          <% } %>
+      </div>
+
+      <div class="position">
+        <div class="card-border">
+          <img src="img/cards/Back.jpg" id="position-3" class="card-image" data-position="3">
+        </div>
+        <% if(type === 'standard') { %>
+          <h2 id="position-3-label" class="label">Future</h2>
+        <% } else if(type === 'custom') { %>
+          <h2 id="position-3-label" class="label"><%= position-3-label %></h2>
+        <% } %>
+      </div>
+    </div>
+    <div class="meanings">
+      <!-- STUFF EVENTUALLY -->
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/deck.js"></script>
+</body>
+</html>
