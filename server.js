@@ -9,7 +9,7 @@ const app = express();
 const pg = require('pg');
 const methodOverride = require('method-override');
 require('dotenv').config();
-const PORT = 3000;
+const PORT = process.env || 3000;
 
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
