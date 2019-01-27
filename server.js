@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 3000;
 app.set('view engine', 'ejs');
 app.use(express.urlencoded({extended: true}));
 app.use(express.static('./public'));
-app.use(methodOverride((req, res) => {
+app.use(methodOverride((req) => { // TODO: removed res, may need to put it back
   if(req.body && typeof req.body === 'object' && '_method' in req.body) {
     let method = req.body._method;
     delete req.body._method;
@@ -34,14 +34,38 @@ client.on('error', err => console.log(err));
 // Routes
 //=======
 
-app.get('/', renderMain);
+app.get('/', renderHome);
+app.get('/table', renderTable);
+app.post('/table', setCustomTable);
+app.get('/custom', renderCustomize);
 
 //=====
 // Main
 //=====
 
-function renderMain (req, res) {
-  res.render('pages/main.ejs');
+function renderHome (req, res) {
+  res.render('pages/home.ejs');
+}
+
+//======
+// Table
+//======
+
+function renderTable (req, res) {
+  res.render('pages/table.ejs', {type: 'standard'});
+}
+
+function setCustomTable (req, res) {
+  // TODO: import form stuff
+  res.render('pages/table.ejs');
+}
+
+//=======
+// Custom
+//=======
+
+function renderCustomize (req, res) {
+  res.render('pages/customize.ejs');
 }
 
 //=========

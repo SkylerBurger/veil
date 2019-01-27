@@ -129,13 +129,6 @@ test.theShuffler(40);
 test.theShuffler(45);
 test.finalSplit(40);
 
-console.log(`${test.deck.length} cards in deck \n`);
-
-for(let i = 0; i < test.deck.length; i++){
-  console.log(`${test.deck[i].name} ------ ${test.deck[i].alignment}`);
-}
-
-
 //==========
 // Rendering
 //==========
@@ -148,7 +141,6 @@ let cards = [card_1, card_2, card_3];
 // Event Handler
 $('.card-image').on('click', function() {
   let $election = $(this).attr('data-position');
-  console.log($election);
   $(this).removeAttr('src');
   let card = cards[$election - 1];
   $(this).attr('src', card.image);
