@@ -13,16 +13,17 @@ div.table {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  border: 1px solid black;
 }
 
 .position {
   position: relative;
-  height: 400px;
-  width: 200px;
+  height: auto;
+  width: 25%;
   margin: auto;
   border-radius: 8px;
+  border: 6px solid black;
   box-shadow: 4px 8px 8px rgb(5, 26, 22);
+  background-image: url('img/cards/Back.jpg');
 }
 
 .reversed {
@@ -32,12 +33,9 @@ div.table {
 .card-image {
   position: relative;
   display: block;
-  height: 400px;
-  width: 200px;
+  height: 100%;
+  width: 100%;
   margin: auto;
-  border: 6px solid black;
   border-radius: 8px;
   box-sizing: border-box;
-  background-image: url('img/cards/Back.jpg');
-  transition: all 2s ease;
 }

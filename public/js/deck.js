@@ -145,25 +145,16 @@ let card_2 = test.deck.pop();
 let card_3 = test.deck.pop();
 let cards = [card_1, card_2, card_3];
 
-// Initial Set-Up
-for(let i = 0; i < cards.length; i++) {
-  let imgEl = $('<img/>', {
-    class: 'card-image',
-    src: `${cards[i].image}`,
-  });
-
-  imgEl.attr('data-position', i+1);
-
-  if(cards[i].reversed){
-    imgEl.addClass('reversed');
-  }
-  let position = '#position-' + (i + 1);
-  imgEl.appendTo(`${position}`);
-}
-
-
 // Event Handler
 $('.card-image').on('click', function() {
   let $election = $(this).attr('data-position');
   console.log($election);
+  $(this).removeAttr('src');
+  let card = cards[$election - 1];
+  $(this).attr('src', card.image);
+
+  if(card.reversed) {
+    $(this).addClass('reversed')
+  }
+
 });
