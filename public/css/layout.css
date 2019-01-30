@@ -1,4 +1,4 @@
-main.home {
+main {
   display: flex;
   height: 100%;
   flex-direction: column;
@@ -12,9 +12,12 @@ div.home {
 div.table {
   width: 100%;
   max-width: 960px;
-  height: 500px;
-  margin: 100px auto 0 auto;
+  margin: auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+div.position {
   justify-content: space-around;
 }
