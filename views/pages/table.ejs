@@ -6,10 +6,12 @@
 </head>
 
 <body>
+  <%- include('../partials/header.ejs') %>
   <main>
     <div class="table">
       <div class="position">
         <div class="card-border">
+          <img src="img/cards/Back.jpg" class="card-image card-back" data-position="1">
           <img src="img/cards/Back.jpg" id="position-1" class="card-image" data-position="1">
         </div>
             <% if(type === 'standard') { %>
@@ -21,6 +23,7 @@
 
       <div class="position">
         <div class="card-border">
+          <img src="img/cards/Back.jpg" class="card-image card-back" data-position="1">
           <img src="img/cards/Back.jpg" id="position-2" class="card-image" data-position="2">
         </div>
           <% if(type === 'standard') { %>
@@ -32,6 +35,7 @@
 
       <div class="position">
         <div class="card-border">
+          <img src="img/cards/Back.jpg" class="card-image card-back" data-position="1">
           <img src="img/cards/Back.jpg" id="position-3" class="card-image" data-position="3">
         </div>
         <% if(type === 'standard') { %>

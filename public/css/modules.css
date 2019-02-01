@@ -8,12 +8,45 @@ h1 {
   margin-bottom: 5px;
 }
 
-h2 {
+h2, h3 {
   font-family: 'Eczar', fantasy, serif;
   font-size: 24px;
   color: #C8B24B;
   text-shadow: 1px 2px 2px #D9403E;
   margin-bottom: 45px;
+}
+
+h3 {
+  margin: 15px 0 15px 15px;
+}
+
+header {
+  background: linear-gradient(rgb(146, 89, 221), rgb(59, 36, 88));
+}
+
+header button {
+  height: 24px;
+  font-size: 18px;
+  font-family: 'Gentium Basic', serif;
+  border: none;
+  border-radius: 5px;
+  margin: 15px 15px 15px 0;
+  color: #C2A272;
+  text-shadow: 1px 2px 2px #D9403E;
+  background: linear-gradient(rgb(27, 114, 81), rgb(38, 155, 116));
+  box-shadow: 1px 2px 2px #2C5635;
+}
+
+header button:hover {
+  position: relative;
+  top: -1px;
+  background: linear-gradient(rgb(36, 149, 106), rgb(45, 190, 142));
+}
+
+header button:active {
+  position: relative;
+  top: 2px;
+  background: linear-gradient(rgb(22, 88, 63), rgb(30, 121, 91));
 }
 
 /* hr styling inspired by css-tricks.com/exapmles/hrs/ */
@@ -78,6 +111,12 @@ input[type="submit"]:active {
   width: 100%;
   margin: auto;
   box-sizing: border-box;
+  z-index: 10;
+}
+
+.card-back {
+  position: absolute;
+  z-index: 1;
 }
 
 .label {
