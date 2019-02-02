@@ -3,7 +3,7 @@
 let suits = ['Wands', 'Cups', 'Pentacles', 'Swords'];
 let values = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Page', 'Knight', 'Queen', 'King'];
 let majors = ['The Fool', 'The Magician', 'The High Priestess', 'The Empress', 'The Emperor', 'The Hierophant', 'The Lovers', 'The Chariot', 'Strength', 'The Hermit', 'The Wheel of Fortune', 'Justice', 'The Hanged Man', 'Death', 'Temperance', 'The Devil', 'The Tower', 'The Star', 'The Moon', 'The Sun', 'Judgement', 'The World'];
-let deck = [];
+// let deck = [];
 
 //=============
 // Constructors
@@ -47,6 +47,7 @@ Deck.prototype.split = function(index) {
   let left = [];
   let right = [];
 
+  console.log(`** Splitting Deck at index ${index}`);
   left = this.deck.slice(0, index);
   right = this.deck.slice(index);
 
@@ -54,6 +55,7 @@ Deck.prototype.split = function(index) {
 }
 
 Deck.prototype.finalSplit = function(index) {
+  console.log('** This is the final split')
   let result = this.split(index);
   let shuffledDeck = [];
   let leftLimit = result.left.length;
@@ -76,6 +78,7 @@ Deck.prototype.shuffle = function(index) {
   let left = split.left;
   let right = split.right; 
   let shuffledDeck = [];
+  console.log('** Shuffling Deck')
 
   // Choose which side starts
   let side = Math.floor(Math.random() * 2);
@@ -144,6 +147,10 @@ $('.card-image').on('click', function() {
   $(this).removeAttr('src');
   let card = cards[$election - 1];
   $(this).attr('src', card.image);
+
+  let position = `#position-${$election}`;
+  $(position).append(`<h4>${card.name}</h4>`);
+  console.log(`** Revealing ${card.name}`);
 
   if(card.reversed) {
     $(this).addClass('reversed')
