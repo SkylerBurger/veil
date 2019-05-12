@@ -21,23 +21,25 @@ class Deck:
         self.reader(42)
 
     def reader(self, index):
-        """Calls the shuffle and split-and-stack methods."""
-        self.shuffle(index)
+        """Simulates the reader shuffling and then cutting the deck on a given index."""
         self.shuffle(index)
         self.cut_and_stack(index)
 
     def split(self, index):
+        """Splits the deck into left-hand and right-hand."""
         index -= 1
         print('** Splitting Deck at index ' + str(index))
         left, right = self.deck[:index], self.deck[index:]
         return {'left': left, 'right': right}
 
     def cut_and_stack(self, index):
+        """Cuts deck at given index and simulates putting stack from the top on the bottom."""
         split = self.split(index)
         left, right = split['left'], split['right']
         self.deck = right + left
 
     def shuffle(self, index):
+        """Simulates a single shuffle of the deck."""
         shuffled_deck = []
         
         split = self.split(index)
@@ -82,7 +84,7 @@ class Deck:
         
         self.deck = shuffled_deck
 
-
+# Demonstration Calls
 my_deck = Deck()
 
 my_deck.reader(35)
