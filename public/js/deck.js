@@ -23,7 +23,7 @@ function Major (name, value, meaning) {
   this.arcana = 'major';
   this.name = name;
   this.value = value;
-  this. meaning = '';
+  this.meaning = '';
   this.reversed = false;
   this.image = `img/cards/${value} ${name}.jpg`;
 }
