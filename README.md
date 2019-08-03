@@ -1,5 +1,5 @@
 # Veil: An Oracle App
-A personal project, to create a tarot app that can eventually accommodate any oracle deck.
+An online tarot deck.
 
 ## Current Master Branch Deployment
 <a href="https://veil-app.herokuapp.com/" target="_blank">Heroku App Link</a> 
